@@ -2,14 +2,14 @@
 
 A project currently at the start of development. No technical details will be available yet, but the readme can still be spiced up! My initial plan involves ONLY random battles, with an algorithm to pick out a decent moveset. Later on, I may use a database to add pre-determined movesets for random battles, a user account interface, and saved team compilations. Replays may also be an option in the future.
 
-# Stack
+## Stack
 
 For this project I've decided to use the PERN stack. PostgreSQL will not come into play until later in development, but the ERN part will still apply for now.
 
 For my frontend, I'm planning on using HTML, CSS, JavaScript, and React. Tailwind is something I've been considering but am not sure if I want to implement it into the project, as I prefer raw CSS files.
 For my backend, I'm planning on using Node.js, Express.js, PostgreSQL, PokeAPI, and Socket.io. I'm new to using Socket.io, but I want to give players the opportunity to connect with each other using custom rooms.
 
-# My Own Quick History
+## My Own Quick History
 
 I used to play pokemon competitively. I started playing pokemon in the early to mid 2000's. My first ever game was Pokemon Colosseum. I was a 6 year old sitting in front of my CRT TV, upset that the cute cat pokemon (ahem, Espeon) was a male instead of female. I didn't go too far as I wasn't really old enough to understand the game, but I had my gamecube for almost a decade before it finally gave in. I completed Pokemon Colosseum after a couple years. I played A LOT of pokemon games and I began taking an interest in competitive pokemon when I was 14.
 
