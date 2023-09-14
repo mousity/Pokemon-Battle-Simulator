@@ -11,3 +11,5 @@ return (
     </div>
 )
 }
+
+export default HomePage;
