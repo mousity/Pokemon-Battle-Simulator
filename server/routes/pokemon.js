@@ -12,7 +12,7 @@ async function getPoke() {
     }
 }
 
-router.get("/", async (req, res) => {  // Mark the callback as async
+router.get("/ditto", async (req, res) => {  // Mark the callback as async
     const pokeData = await getPoke();  // Await the result of getPoke()
     
     if (pokeData) {
