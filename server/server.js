@@ -33,3 +33,9 @@ io.on("connection", (socket) => {
         socket.broadcast.emit("receive_message", data);
     })
 })
+
+// Routes
+const pokeRouter = require("./routes/pokemon");
+
+// Setting up ways to call the route
+app.use("/api/pokemon", pokeRouter);
