@@ -3,12 +3,12 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
-import HomePage from './homepage/HomePage.jsx';
+import HomePage from "./homepage/homepage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>
+    element: <HomePage />
   }
 ])
 
