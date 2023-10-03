@@ -36,8 +36,7 @@ io.on("connection", (socket) => {
     socket.on("joinRoom", (roomId) => {
         socket.join(roomId);
         const rooms = Object.keys(socket.rooms);
-
-  console.log(`Socket is in rooms: ${rooms}`);
+        console.log(`Socket is in rooms: ${rooms}`);
     })
 })
 
