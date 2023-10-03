@@ -1,10 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from './App.jsx';
 import HomePage from "./homepage/HomePage.jsx";
 import NavBar from "./navbar/NavBar.jsx";
-import io from 'socket.io-client'
 import { SocketProvider } from "./contexts/SocketContext.jsx";
 
 const router = createBrowserRouter([
