@@ -6,12 +6,14 @@ const SocketContext = createContext();
 
 // Function to intiialize socket creation
 const initializeSocket = () => {
-    const socket = io.connect("http://localhost:4000"); // Replace 'your_socket_server_url' with the actual URL of your socket server
+    const socket = io.connect("http://localhost:4000"); 
+    console.log("initializing socket...");
     return socket;
   };
 
 // Using the context we created
 export function useSocket() {
+  console.log("using socket");
   return useContext(SocketContext);
 }
 
