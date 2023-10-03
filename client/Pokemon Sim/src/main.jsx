@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx';
 import HomePage from "./homepage/HomePage.jsx";
 import NavBar from "./navbar/NavBar.jsx";
+import io from 'socket.io-client'
+const socket = io.connect("http://localhost:4000")
 
 const router = createBrowserRouter([
   {
