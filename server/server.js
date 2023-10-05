@@ -26,6 +26,7 @@ const io = new Server(server, {
     }
 })
 
+// Main socket.io connection hub for the player
 io.on("connection", (socket) => {
     console.log(`user connected: ${socket.id}`);
 
@@ -33,10 +34,16 @@ io.on("connection", (socket) => {
         socket.broadcast.emit("receive_message", data);
     })
 
+    // Allows player to join a room and logs the output
     socket.on("joinRoom", (roomId) => {
-        socket.join(roomId);
-        const rooms = [...socket.rooms];  // Convert the Set to an array
-        console.log(`Socket is in rooms: ${rooms}, which is supposed to be ${roomId}`);
+        try{
+            socket.join(roomId);
+            const rooms = [...socket.rooms];  // Convert the Set to an array
+            console.log(`Socket is in rooms: ${rooms}, which is supposed to be ${roomId}`);
+        } catch (err) {
+            console.log("Cannot join room!");
+            console.log(err);
+        }
     });
     
 })
