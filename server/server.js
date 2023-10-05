@@ -35,9 +35,10 @@ io.on("connection", (socket) => {
 
     socket.on("joinRoom", (roomId) => {
         socket.join(roomId);
-        const rooms = Object.keys(socket.rooms);
-        console.log(`Socket is in rooms: ${rooms}`);
-    })
+        const rooms = [...socket.rooms];  // Convert the Set to an array
+        console.log(`Socket is in rooms: ${rooms}, which is supposed to be ${roomId}`);
+    });
+    
 })
 
 // Routes
