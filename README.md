@@ -9,6 +9,10 @@ For this project I've decided to use the PERN stack. PostgreSQL will not come in
 For my frontend, I'm planning on using HTML, CSS, JavaScript, and React. Tailwind is something I've been considering but am not sure if I want to implement it into the project, as I prefer raw CSS files.
 For my backend, I'm planning on using Node.js, Express.js, PostgreSQL, PokeAPI, and Socket.io. I'm new to using Socket.io, but I want to give players the opportunity to connect with each other using custom rooms.
 
+## How do I Run it?
+
+Easy! If you have a github account, you can use `git clone` on my repository. If you don't have a github account, simple download the code as a ZIP file and unzip it in the directory of your choice. Will continue this section when I'm not in class anymore. `In construction!`
+
 ## My Own Quick History
 
 I used to play pokemon competitively. I was never that great! I knew how to build great teams, but I mostly stuck to pokemon I liked, even if it meant having four (4!!!) pokemon out of my 6 being weak to ice. I spent all day breeding for stats, moves, and training for 'extra' stats. At some point, though, I stopped playing. I didn't like the new battle gimmicks of the newer generations, and I haven't bothered to buy the latest game. I didn't stop loving competitive, I just didn't like the direction the games were going in. So, I moved to [Pokemon Showdown!](https://play.pokemonshowdown.com/)
