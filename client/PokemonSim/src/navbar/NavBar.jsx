@@ -5,8 +5,8 @@ import { Outlet } from "react-router-dom";
 function NavBar(){
 return (
     <>
-        <div className="Navb">
-            <h1>Logo Placeholder for now!</h1>
+        <div className="Navbar">
+            <h1 className="logo"></h1>
         </div>
         <Outlet />
     </>
