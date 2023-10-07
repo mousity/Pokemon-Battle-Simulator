@@ -14,7 +14,7 @@ async function getTestPoke() {
 
 async function getPoke() {
     try {
-        let pokemon = await axios.get("https://pokeapi.co/api/v2/pokemon/ditto");
+        let pokemon = await axios.get("https://pokeapi.co/api/v2/pokemon/pikachu/");
         return pokemon.data;
     } catch (error) {
         console.error("Error fetching pokemon!", error);
@@ -33,15 +33,20 @@ router.get("/ditto", async (req, res) => {  // Mark the callback as async
 });
 
 router.get("/generateTeam", async (req, res) => {
-    const team = {
-        name: ""
-    }
+    const team = [
+        {
+            name: "",
+            types: []
+        }
+    ]
 
-    //for(let i = 0; i < 6; i++) {
+    for(let i = 0; i < 6; i++) {
         const pokemon = await getPoke();
-        team.name = pokemon.name;
-        console.log(team.name);
-    //}
+        team[0].name = pokemon.name;
+        team[0].types = pokemon.types[0].type.name;
+        console.log(team[0].name);
+        console.log(team[0].types);
+    }
 
     return res.json(team);
 })
