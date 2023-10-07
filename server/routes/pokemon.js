@@ -33,12 +33,15 @@ router.get("/ditto", async (req, res) => {  // Mark the callback as async
 });
 
 router.get("/generateTeam", async (req, res) => {
-    const team = {"Pikachu": 0}
-
-    while(team.length < 6) {
-        const pokemon = await getPoke();
-        team.push(pokemon.data.name);
+    const team = {
+        name: ""
     }
+
+    //for(let i = 0; i < 6; i++) {
+        const pokemon = await getPoke();
+        team.name = pokemon.name;
+        console.log(team.name);
+    //}
 
     return res.json(team);
 })
