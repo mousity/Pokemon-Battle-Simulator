@@ -14,7 +14,7 @@ async function getTestPoke() {
 
 async function getPoke() {
     try {
-        let pokemon = await axios.get("https://pokeapi.co/api/v2/pokemon/pidgey/");
+        let pokemon = await axios.get("https://pokeapi.co/api/v2/pokemon/pikachu/");
         return pokemon.data;
     } catch (error) {
         console.error("Error fetching pokemon!", error);
@@ -37,9 +37,36 @@ router.get("/generateTeam", async (req, res) => {
 
     for(let i = 0; i < 6; i++) {
         const pokemon = await getPoke();
+        let subcount = 0;
         team.push({
             name: pokemon.name,
-            types: pokemon.types
+            types: pokemon.types,
+            stats: [
+                {   
+                    name: "hp",
+                    base_stat: pokemon.stats[subcount].base_stat
+                },
+                {
+                    name: "attack",
+                    base_state: pokemon.stats[++subcount].base_stat
+                },
+                {
+                    name: "defense",
+                    base_stat: pokemon.stats[++subcount].base_stat
+                },
+                {
+                    name: "special-attack",
+                    base_stat: pokemon.stats[++subcount].base_stat
+                },
+                {
+                    name: "special-defense",
+                    base_stat: pokemon.stats[++subcount].base_stat
+                },
+                {
+                    name: "speed",
+                    base_stat: pokemon.stats[++subcount].base_stat
+                }
+            ]
         })
     }
 
