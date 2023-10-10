@@ -24,6 +24,21 @@ async function getPoke(num) {
     }
 }
 
+async function generateMoves(pokemon) {
+    const moves = [];
+    try {
+        for(let i = 0; i < 4; i++) {
+            const randomNum = Math.floor(Math.random() * (pokemon.moves.length - 1) + 1);
+            moves.push(pokemon.moves[randomNum]);
+        }
+
+        return moves;
+    } catch (error) {
+        console.error("Error generating moves!", error);
+        return null;
+    }
+}
+
 // Sample route to fetch test data
 router.get("/ditto", async (req, res) => {  // Mark the callback as async
     const pokeData = await getTestPoke();  // Await the result of getPoke()
@@ -35,6 +50,7 @@ router.get("/ditto", async (req, res) => {  // Mark the callback as async
     }
 });
 
+
 // Random team generator
 router.get("/generateTeam", async (req, res) => {
     const team = []
@@ -43,6 +59,7 @@ router.get("/generateTeam", async (req, res) => {
     for(let i = 0; i < 6; i++) {
         const randomNum = Math.floor(Math.random() * (max - min) + min);
         const pokemon = await getPoke(randomNum);
+        const moves = await generateMoves(pokemon);
         let subcount = 0;
         team.push({
             name: pokemon.name,
@@ -73,7 +90,7 @@ router.get("/generateTeam", async (req, res) => {
                     base_stat: pokemon.stats[++subcount].base_stat
                 }
             ],
-            moves: []
+            moves: [moves]
         })
     }
 
