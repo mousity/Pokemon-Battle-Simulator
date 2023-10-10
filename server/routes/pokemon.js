@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
+// Test function for comparison to normal function
 async function getTestPoke() {
     try {
         let ditto = await axios.get("https://pokeapi.co/api/v2/pokemon/ditto");
@@ -12,9 +13,10 @@ async function getTestPoke() {
     }
 }
 
-async function getPoke() {
+// Gets a random pokemon from API to put into a generated team
+async function getPoke(num) {
     try {
-        let pokemon = await axios.get("https://pokeapi.co/api/v2/pokemon/pikachu/");
+        let pokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${num}/`);
         return pokemon.data;
     } catch (error) {
         console.error("Error fetching pokemon!", error);
@@ -22,6 +24,7 @@ async function getPoke() {
     }
 }
 
+// Sample route to fetch test data
 router.get("/ditto", async (req, res) => {  // Mark the callback as async
     const pokeData = await getTestPoke();  // Await the result of getPoke()
     
@@ -32,11 +35,14 @@ router.get("/ditto", async (req, res) => {  // Mark the callback as async
     }
 });
 
+// Random team generator
 router.get("/generateTeam", async (req, res) => {
     const team = []
+    const max = 152, min = 1;
 
     for(let i = 0; i < 6; i++) {
-        const pokemon = await getPoke();
+        const randomNum = Math.floor(Math.random() * (max - min) + min);
+        const pokemon = await getPoke(randomNum);
         let subcount = 0;
         team.push({
             name: pokemon.name,
@@ -66,7 +72,8 @@ router.get("/generateTeam", async (req, res) => {
                     name: "speed",
                     base_stat: pokemon.stats[++subcount].base_stat
                 }
-            ]
+            ],
+            moves: []
         })
     }
 
