@@ -11,7 +11,7 @@ For my backend, I'm planning on using Node.js, Express.js, PostgreSQL, PokeAPI, 
 
 ## How do I Run it?
 
-Easy! If you have a github account, you can use `git clone` on my repository. If you don't have a github account, simple download the code as a ZIP file and unzip it in the directory of your choice. Will continue this section when I'm not in class anymore. `In construction!`
+Easy! If you have a github account, you can use `git clone` on my repository. If you don't have a github account, simple download the code as a ZIP file and unzip it in the directory of your choice. Will continue this section when I'm more motivated to do so. `In construction!`
 
 ## My Own Quick History
 
