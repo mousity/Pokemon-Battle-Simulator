@@ -24,6 +24,8 @@ async function getPoke(num) {
     }
 }
 
+// Generate moves function. ONLY generates moves with not-null power, resulting in too-high load times
+// Planning on using a dictionary to provide a list of excluded moves instead of checking power
 async function generateMoves(pokemon) {
     const moves = [];
     try {
@@ -59,9 +61,11 @@ router.get("/ditto", async (req, res) => {  // Mark the callback as async
 
 // Random team generator
 router.get("/generateTeam", async (req, res) => {
+    // Team array to return to the frontend. Max and min signify the range of pokemon
     const team = []
     const max = 152, min = 1;
 
+    // Fill a team with 6 pokemon
     for(let i = 0; i < 6; i++) {
         const randomNum = Math.floor(Math.random() * (max - min) + min);
         const pokemon = await getPoke(randomNum);
