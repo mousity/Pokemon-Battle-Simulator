@@ -65,7 +65,7 @@ router.get("/generateTeam", async (req, res) => {
     const team = []
     const max = 152, min = 1;
 
-    // Fill a team with 6 pokemon
+    // Fill a team with 6 pokemon, needs to be changed later
     for(let i = 0; i < 6; i++) {
         const randomNum = Math.floor(Math.random() * (max - min) + min);
         const pokemon = await getPoke(randomNum);
