@@ -47,6 +47,14 @@ async function generateMoves(pokemon) {
     }
 }
 
+async function checkIfEvolved(pokemon) {
+    try {
+
+    } catch (error) {
+        console.error("Cannot check if evolved!", error);
+    }
+}
+
 // Sample route to fetch test data
 router.get("/ditto", async (req, res) => {  // Mark the callback as async
     const pokeData = await getTestPoke();  // Await the result of getPoke()
