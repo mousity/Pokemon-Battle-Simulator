@@ -87,6 +87,7 @@ router.get("/generateTeam", async (req, res) => {
         team.push({
             name: pokemon.name,
             types: pokemon.types,
+            sprite: pokemon.sprites.front_default,
             stats: [
                 {   
                     name: "hp",
