@@ -38,7 +38,9 @@ async function generateMoves(pokemon) {
             } else {
                 moves.push({
                     name: moveDetails.data.name,
-                    power: moveDetails.data.power
+                    power: moveDetails.data.power,
+                    type: moveDetails.data.type.name,
+                    typeurl: moveDetails.data.type.url
                 });
             }
         }
