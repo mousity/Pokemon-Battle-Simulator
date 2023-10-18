@@ -33,6 +33,8 @@ async function generateMoves(pokemon) {
             const randomNum = Math.floor(Math.random() * (pokemon.moves.length - 1) + 1);
             let moveData = pokemon.moves[randomNum].move;
             const moveDetails = await axios.get(`${moveData.url}`);
+            // If the power is null, regenerate list
+            // Only here as non-null moves require special implementation
             if(moveDetails.data.power == null) {
                 i--;
             } else {
@@ -52,6 +54,7 @@ async function generateMoves(pokemon) {
     }
 }
 
+// Function to check if pokemon is evolved
 async function checkIfEvolved(pokemon) {
     try {
 
@@ -84,6 +87,8 @@ router.get("/generateTeam", async (req, res) => {
         const pokemon = await getPoke(randomNum);
         const moves = await generateMoves(pokemon);
         let subcount = 0;
+
+        // Team member includes: pokemon name, type list, sprite, base stats, moves, power of moves, and type of moves
         team.push({
             name: pokemon.name,
             types: pokemon.types,
