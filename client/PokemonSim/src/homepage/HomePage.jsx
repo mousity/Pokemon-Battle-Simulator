@@ -23,6 +23,10 @@ function HomePage(){
                     <input type="submit"/>
                 </form>
             </div>
+            <div className="introBox">
+                <p>Prepping testing on the home page for team generation</p>
+                <button>Generate Team</button>
+            </div>
         </div>
     )
 }
