@@ -33,7 +33,7 @@ async function generateMoves(pokemon) {
             const randomNum = Math.floor(Math.random() * (pokemon.moves.length - 1) + 1);
             let moveData = pokemon.moves[randomNum].move;
             const power = await axios.get(`${moveData.url}`);
-            if(power === null) {
+            if(power.data.power == null) {
                 i--;
             } else {
                 moves.push(moveData);
