@@ -1,15 +1,26 @@
-import react, { useState } from "react";
+import react, { useEffect, useState } from "react";
 import './HomePage.css';
 import { useSocket } from "../contexts/SocketContext";
 
 function HomePage(){
     const socket = useSocket();
     const [roomId, setRoomId] = useState(0);
+    const [team, setTeam] = useState({});
 
     const handleRoomJoin = (e) => {
         e.preventDefault();
         socket.emit("joinRoom", roomId)
     }
+
+    const generateTeam = async(e) => {
+        const data = await fetch("http://localhost:4000/api/pokemon/generateTeam")
+        const teamdata = await data.json();
+        setTeam(teamdata);
+    }
+
+    useEffect(()=>{
+        console.log(team);
+    }, [team])
 
     return (
         <div className="homepage">
@@ -25,7 +36,7 @@ function HomePage(){
             </div>
             <div className="introBox">
                 <p>Prepping testing on the home page for team generation</p>
-                <button>Generate Team</button>
+                <button onClick={generateTeam}>Generate Team</button>
             </div>
         </div>
     )

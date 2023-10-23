@@ -7,6 +7,7 @@ const cors = require('cors');
 
 const server = http.createServer(app);
 app.use(express.json());
+app.use(cors());
 
 server.listen(port, () => {
     console.log(`Server running on port ${port}`);
