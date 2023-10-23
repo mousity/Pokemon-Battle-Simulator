@@ -7,11 +7,13 @@ A project currently at the start of development. No technical details will be av
 For this project I've decided to use the PERN stack. PostgreSQL will not come into play until later in development, but the ERN part will still apply for now.
 
 For my frontend, I'm planning on using HTML, CSS, JavaScript, and React. Tailwind is something I've been considering but am not sure if I want to implement it into the project, as I prefer raw CSS files.
-For my backend, I'm planning on using Node.js, Express.js, PostgreSQL, PokeAPI, and Socket.io. I'm new to using Socket.io, but I want to give players the opportunity to connect with each other using custom rooms.
+For my backend, I'm planning on using Node.js, Express.js, PostgreSQL, PokeAPI, and Socket.io. I'm new to using Socket.io, but I want to give players the opportunity to connect with each other using custom rooms. It's also something I'm just interesting in learning!
 
 ## How do I Run it?
 
-Easy! If you have a github account, you can use `git clone` on my repository. If you don't have a github account, simple download the code as a ZIP file and unzip it in the directory of your choice. Will continue this section when I'm more motivated to do so. `In construction!`
+Easy! If you have a github account, you can use `git clone` on my repository. If you don't have a github account, simple download the code as a ZIP file and unzip it in the directory of your choice. In your terminal, move to the directory `Pokemon-Battle-Simulator` is in. From here, move to the `server` folder, then run `npm install`. Once we've installed dependencies for the server, while we are still in the server folder, run `npm install`. 
+
+The next step is similar; make another terminal (WITHOUT closing the first one!) and move to `Pokemon-Battle-Simulator` again. This time, we'll move further; move to the `client` folder, then move again to the `PokemonSim` folder. Here, run `npm install`. After we've installed our frontend dependencies, run `npm run dev`. Will continue this section when I'm more motivated to do so. `In construction!`
 
 ## My Own Quick History
 
