@@ -21,6 +21,14 @@ html, body {
     gap: 1em;
 }
 
+.teamBox {
+    display: flex;
+    width: auto;
+    height: 15em;
+    flex-direction: row;
+    gap:2em;
+}
+
 .homepage {
     position: relative;  /* Ensure this is set */
     min-width: auto;

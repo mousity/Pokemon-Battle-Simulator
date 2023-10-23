@@ -37,9 +37,11 @@ function HomePage(){
             <div className="introBox">
                 <p>Prepping testing on the home page for team generation</p>
                 <button onClick={generateTeam}>Generate Team</button>
-                {team.map(team => (
-                    <p>{team.name}</p>
-                ))}
+                <div className="teamBox">
+                    {team.map(team => (
+                        <p>{team.name}</p>
+                    ))}
+                </div>
             </div>
         </div>
     )
