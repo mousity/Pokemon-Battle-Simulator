@@ -5,7 +5,7 @@ import { useSocket } from "../contexts/SocketContext";
 function HomePage(){
     const socket = useSocket();
     const [roomId, setRoomId] = useState(0);
-    const [team, setTeam] = useState({});
+    const [team, setTeam] = useState([]);
 
     const handleRoomJoin = (e) => {
         e.preventDefault();
@@ -37,6 +37,9 @@ function HomePage(){
             <div className="introBox">
                 <p>Prepping testing on the home page for team generation</p>
                 <button onClick={generateTeam}>Generate Team</button>
+                {team.map(team => (
+                    <p>{team.name}</p>
+                ))}
             </div>
         </div>
     )
