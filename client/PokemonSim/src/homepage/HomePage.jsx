@@ -39,7 +39,7 @@ function HomePage(){
                 <button onClick={generateTeam}>Generate Team</button>
                 <div className="teamBox">
                     {team.map(team => (
-                        <p>{team.name}</p>
+                        <img src={team.sprite}/>
                     ))}
                 </div>
             </div>
