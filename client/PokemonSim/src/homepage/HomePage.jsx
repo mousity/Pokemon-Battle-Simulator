@@ -5,7 +5,7 @@ import { useSocket } from "../contexts/SocketContext";
 function HomePage(){
     const socket = useSocket();
     const [roomId, setRoomId] = useState(0);
-    const [team, setTeam] = useState([]);
+    const [team, setTeam] = useState(null);
 
     const handleRoomJoin = (e) => {
         e.preventDefault();
@@ -24,6 +24,7 @@ function HomePage(){
 
     return (
         <div className="homepage">
+            <div className="left">
             <div className="introBox">
                 <h1>Welcome to my battle sim!</h1>
                 <p>Every pokemon battle is random, consisting of generations 1 and 2 thus far.
@@ -34,16 +35,18 @@ function HomePage(){
                     <input type="submit"/>
                 </form>
             </div>
-            <div className="introBox">
-                <p>Prepping testing on the home page for team generation</p>
-                <button onClick={generateTeam}>Generate Team</button>
-                <div className="teamBox">
+            <div className="pokeBox">
+                {team == null ? null : <div className="teamBox">
                     {team.map(team => (
                         <img src={team.sprite}/>
+                        
                     ))}
-                </div>
+                </div>}
+                <button onClick={generateTeam}>Generate Team</button>
+                
             </div>
-        </div>
+            </div>
+            </div>
     )
 }
 
