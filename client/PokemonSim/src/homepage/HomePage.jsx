@@ -12,7 +12,7 @@ function HomePage(){
         socket.emit("joinRoom", roomId)
     }
 
-    const generateTeam = async(e) => {
+    const generateTeam = async() => {
         const data = await fetch("http://localhost:4000/api/pokemon/generateTeam")
         const teamdata = await data.json();
         setTeam(teamdata);
@@ -38,7 +38,11 @@ function HomePage(){
             <div className="pokeBox">
                 {team == null ? null : <div className="teamBox">
                     {team.map(team => (
-                        <img src={team.sprite}/>
+                        <div className="pokeCard">
+                            <img src={team.sprite}/>
+                            <p>{team.name}</p>
+                        </div>
+                        
                         
                     ))}
                 </div>}
