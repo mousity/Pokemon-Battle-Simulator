@@ -42,8 +42,6 @@ function HomePage(){
                             <img src={team.sprite}/>
                             <p>{team.name}</p>
                         </div>
-                        
-                        
                     ))}
                 </div>}
                 <button onClick={generateTeam}>Generate Team</button>
