@@ -28,23 +28,27 @@ function HomePage(){
             <div className="introBox">
                 <h1>Welcome to my battle sim!</h1>
                 <p>Every pokemon battle is random, consisting of generations 1 and 2 thus far.
-                    Though not perfect, an basic algorithm is in place to generate decent movesets for your pokemon. Enter a room to connect with a friend!
-                    Not functional as of yet.</p>
-                <form onSubmit={handleRoomJoin}>
-                    <input type="number" name="roomNumber" className="roomNumber" value={roomId} placeholder="Room Number..." onChange={(e) => setRoomId(e.target.value)}/>
-                    <input type="submit"/>
-                </form>
+                    Though not perfect, an basic algorithm is in place to generate decent movesets for your pokemon.
+                    
+                    Generate a team! Once you're ready, enter a room to join with your team. Your first pokemon is your lead.</p>
+                
             </div>
             <div className="pokeBox">
-                {team == null ? null : <div className="teamBox">
+                {team == null ? null : <><div className="teamBox">
                     {team.map(team => (
                         <div className="pokeCard">
                             <img src={team.sprite}/>
                             <p>{team.name}</p>
                         </div>
                     ))}
-                </div>}
-                <button onClick={generateTeam}>Generate Team</button>
+                </div>
+                <div>
+                    <form onSubmit={handleRoomJoin}>
+                    <input type="number" name="roomNumber" className="roomNumber" value={roomId} placeholder="Room Number..." onChange={(e) => setRoomId(e.target.value)}/>
+                    <input type="submit"/>
+                </form>
+                </div></>}
+                <button onClick={generateTeam} className="generateTeamButton">Generate Team!</button>
                 
             </div>
             </div>

@@ -19,6 +19,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     gap: 1em;
+    margin-bottom: 3em;
 }
 
 .teamBox {
@@ -35,7 +36,7 @@ html, body {
     align-items: center;
     background-color: aliceblue;
     width: auto;
-    
+    border-radius: 1em;
    
 }
 
@@ -73,4 +74,9 @@ html, body {
     bottom: 0;
     left: 0;
     z-index: -1;    /* Ensure it's below the actual content */
+}
+
+.generateTeamButton {
+    margin: 1em;
+    padding: 0.7em;
 }
