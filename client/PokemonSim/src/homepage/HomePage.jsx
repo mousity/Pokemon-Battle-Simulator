@@ -38,7 +38,7 @@ function HomePage(){
                     {team.map(team => (
                         <div className="pokeCard">
                             <img src={team.sprite}/>
-                            <p>{team.name}</p>
+                            <p className="pokeName">{team.name}</p>
                         </div>
                     ))}
                 </div>

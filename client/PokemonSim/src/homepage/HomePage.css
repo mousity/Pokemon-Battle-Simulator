@@ -80,3 +80,8 @@ html, body {
     margin: 1em;
     padding: 0.7em;
 }
+
+.pokeName {
+    margin: .1 em;
+    padding: .2 em;
+}
