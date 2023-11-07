@@ -6,6 +6,7 @@ function HomePage(){
     const socket = useSocket();
     const [roomId, setRoomId] = useState(0);
     const [team, setTeam] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const handleRoomJoin = (e) => {
         e.preventDefault();
@@ -13,9 +14,11 @@ function HomePage(){
     }
 
     const generateTeam = async() => {
+        setLoading(true);
         const data = await fetch("http://localhost:4000/api/pokemon/generateTeam")
         const teamdata = await data.json();
         setTeam(teamdata);
+        setLoading(false);
     }
 
     useEffect(()=>{
@@ -27,6 +30,7 @@ function HomePage(){
             <div className="left">
             <div className="introBox">
                 <h1>Welcome to my battle sim!</h1>
+                {loading ? <h2>loading...</h2> : <h2>done!</h2>}
                 <p>Every pokemon battle is random, consisting of generations 1 and 2 thus far.
                     Though not perfect, an basic algorithm is in place to generate decent movesets for your pokemon.
                     
