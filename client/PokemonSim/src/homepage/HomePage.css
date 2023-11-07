@@ -79,9 +79,27 @@ html, body {
 .generateTeamButton {
     margin: 1em;
     padding: 0.7em;
+    background-color: #ff3232;
+    text-decoration: none;
+    border-radius: 1em;
+    color: white;
+    margin-left: 0;
+    font-weight: 600;
+    
 }
 
 .pokeName {
     margin: .1 em;
     padding: .2 em;
+}
+
+.pokeButton {
+    width: 4em;
+}
+
+.genTeamContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

@@ -52,8 +52,10 @@ function HomePage(){
                     <input type="submit"/>
                 </form>
                 </div></>}
-                <button onClick={generateTeam} className="generateTeamButton">Generate Team!</button>
-                
+                <div className="genTeamContainer">
+                    <img className="pokeButton" src="https://www.pngall.com/wp-content/uploads/4/Pokeball-PNG-Free-Download.png"/>
+                    <button onClick={generateTeam} className="generateTeamButton">Generate Team!</button>
+                </div>
             </div>
             </div>
             </div>
