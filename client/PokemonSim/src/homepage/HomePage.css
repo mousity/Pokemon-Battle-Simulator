@@ -93,10 +93,13 @@ html, body {
     padding: .2 em;
 }
 
-.pokeButton {
+.spinner {
     width: 4em;
-    animation: spin 2s linear infinite;
 }
+
+.spinner.spin {
+    animation: spin 2s linear infinite;
+  }
 
 .genTeamContainer {
     display: flex;

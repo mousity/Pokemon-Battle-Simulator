@@ -53,7 +53,7 @@ function HomePage(){
                 </form>
                 </div></>}
                 <div className="genTeamContainer">
-                    <img className="pokeButton" src="https://www.pngall.com/wp-content/uploads/4/Pokeball-PNG-Free-Download.png"/>
+                    <img className={loading ? 'spinner spin' : 'spinner'} src="https://www.pngall.com/wp-content/uploads/4/Pokeball-PNG-Free-Download.png"/>
                     <button onClick={generateTeam} className="generateTeamButton">Generate Team!</button>
                 </div>
             </div>
