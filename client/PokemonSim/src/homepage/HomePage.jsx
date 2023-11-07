@@ -30,7 +30,6 @@ function HomePage(){
             <div className="left">
             <div className="introBox">
                 <h1>Welcome to my battle sim!</h1>
-                {loading ? <h2>loading...</h2> : <h2>done!</h2>}
                 <p>Every pokemon battle is random, consisting of generations 1 and 2 thus far.
                     Though not perfect, an basic algorithm is in place to generate decent movesets for your pokemon.
                     
