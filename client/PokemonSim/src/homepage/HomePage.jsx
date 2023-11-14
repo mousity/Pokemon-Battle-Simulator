@@ -7,10 +7,11 @@ function HomePage(){
     const [roomId, setRoomId] = useState(0);
     const [team, setTeam] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [roomSearch, setRoomSearch] = useState(false);
 
     const handleRoomJoin = (e) => {
         e.preventDefault();
-        socket.emit("joinRoom", roomId)
+        socket.emit("joinRoom", roomId);
     }
 
     const generateTeam = async() => {
