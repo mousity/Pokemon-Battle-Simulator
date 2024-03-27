@@ -4,10 +4,10 @@ A project currently at the start of development. No technical details will be av
 
 ## Stack
 
-For this project I've decided to use the PERN stack. PostgreSQL will not come into play until later in development, but the ERN part will still apply for now.
+For this project I've decided to use the MERN stack. MongoDB will not come into play until later in development, but the ERN part will still apply for now.
 
 For my frontend, I'm planning on using HTML, CSS, JavaScript, and React. Tailwind is something I've been considering but am not sure if I want to implement it into the project, as I prefer raw CSS files. (Update: I'm probably not using tailwind!) 
-For my backend, I'm planning on using Node.js, Express.js, PostgreSQL, PokeAPI, and Socket.io. I'm new to using Socket.io, but I want to give players the opportunity to connect with each other using custom rooms. It's also something I'm just interesting in learning!
+For my backend, I'm planning on using Node.js, Express.js, MongoDB, PokeAPI, and Socket.io. I'm new to using Socket.io, but I want to give players the opportunity to connect with each other using custom rooms. It's also something I'm just interesting in learning!
 
 ## How do I Run it?
 
